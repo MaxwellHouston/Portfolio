@@ -56,13 +56,17 @@ header button {
     text-shadow: 2px 2px black;
 }
 
+#about-button {
+    text-decoration: underline #4266a1;
+}
 /*Code Viewer*/
 
 #code-box {
     grid-column: 2 / span 1;
     text-align: center;
     border: 2px solid #303030;
-    
+    display: grid;
+    grid-template: 15% 1fr 10% / 1fr;  
 }
 
 #code-title {
@@ -71,15 +75,21 @@ header button {
     color: #dfdfdf;
     text-shadow: 2px 2px black;
     font-size: 2rem;
+    grid-area: 1 / 1 / 2 / 2;
 }
 
 #code-options {
     border-top: 2px solid #303030;
+    grid-area: 3 / 1 / 4 / 2;
 }
 
+#code-viewer {
+    grid-area: 2 / 1 / 3 / 2;
+}
 object {
     width: 100%;
-    height: 44rem;
+    height: 100%;
+    /*height: 44rem;*/
 }
 
 #code-options ul {
@@ -148,7 +158,7 @@ article p {
 /*About Me*/
 
 #about {
-    z-index: 12;
+    z-index: 2;
 }
 
 #about a {
@@ -158,25 +168,25 @@ article p {
 /*Game of War*/
 
 #game {
-    z-index: 0;
+    z-index: 1;
 }
 
 /*Island Golf*/
 
 #island {
-    z-index: 3;
+    z-index: 1;
 }
 
 /*Portfolio*/
 
 #portfolio {
-    z-index: 5;
+    z-index: 1;
 }
 
 /*More Projects*/
 
 #more {
-    z-index: 7;
+    z-index: 1;
 }
 
 table {
