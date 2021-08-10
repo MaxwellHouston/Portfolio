@@ -26,11 +26,25 @@ main {
     grid-area: 1 / 2 / 2 / 4;
     display: grid;
     grid-template: 1fr / 1fr 1fr;
-    align-content: center;
 }
 
 @media only screen and (max-width:1025px) {
-    
+    body {
+        grid-template: 150px 1fr 1fr / 1fr;
+    }
+
+    header {
+        grid-area: 1 / 1 / 2 / 2;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+    }
+
+    main {
+        grid-area: 2 / 1 / 4 / 2;
+        display: grid;
+        grid-template: 1fr 1fr / 1fr;
+    }
 }
 /*Header Nav*/
 
@@ -62,6 +76,32 @@ header button {
 #about-button {
     text-decoration: underline #4266a1;
 }
+
+@media only screen and (max-width: 1025px) {
+
+    header img {
+        height: 150px;
+    }
+
+    header nav {
+        padding: 0;
+        display: flex;
+        align-content: center;
+    }
+
+    header ul {
+        flex-direction: row;
+    }
+
+    header li {
+        margin: 1rem;
+    }
+
+    header button {
+        font-size: 1.3rem;
+    }
+}
+
 /*Code Viewer*/
 
 #code-box {
@@ -124,11 +164,13 @@ object {
 .page {
     grid-area: 1 / 1 / 2 / 2;
     background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #img img {
-    width: 65%;
-    margin-top: 2rem;
+    max-height: 500px;
   }
 
 #img {
@@ -145,6 +187,20 @@ object {
 
 #js {
     z-index: 1;
+}
+
+@media only screen and (max-width: 1025px) {
+
+    #code-box {
+        grid-column: 1 / 2;
+    }
+
+    #code-viewer {
+        width: 65%;
+        justify-self: center;
+    }
+    
+    
 }
 
 /*Articles*/
@@ -188,6 +244,17 @@ article p {
 
 .lang li {
     margin: 2rem;
+}
+
+@media only screen and (max-width: 1025px) {
+
+    article {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    article p {
+        width: 85%;
+    }
 }
 
 /*About Me*/
